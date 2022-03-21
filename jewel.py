@@ -43,18 +43,18 @@ class Jewel:
                     mime = "image"
                 header = "HTTP/1.1 200 OK\nContent-Length: " + \
                     str(size)+"\r\nContent-Type: "+mime+"/" + \
-                    kind[2]+"\r\nConnection: Closed\r\n"
+                    kind[2]+"\r\nServer: bt3qzd\r\nConnection: Closed\r\n"
             else:
                 header = "HTTP/1.1 200 OK\r\nContent-Length: " + \
-                    str(size)+"\r\nContent-Type: text/html\r\nConnection: Closed\r\n"
+                    str(size)+"\r\nContent-Type: text/html\r\nServer: bt3qzd\r\nConnection: Closed\r\n"
         elif status == 400:
-            header = "HTTP/1.1 400 Bad Request\r\nConnection: Closed\r\n"
+            header = "HTTP/1.1 400 Bad Request\r\nServer: bt3qzd\r\nConnection: Closed\r\n"
         elif status == 404:
-            header = "HTTP/1.1 404 Not Found\r\nConnection: Closed\r\n"
+            header = "HTTP/1.1 404 Not Found\r\nServer: bt3qzd\r\nConnection: Closed\r\n"
         elif status == 500:
-            header = "HTTP/1.1 500 Internal Server Error\r\nConnection: Closed\r\n"
+            header = "HTTP/1.1 500 Internal Server Error\r\nServer: bt3qzd\r\nConnection: Closed\r\n"
         elif status == 501:
-            header = "HTTP/1.1 501 Method Unimplemented\r\nConnection: Closed\r\n"
+            header = "HTTP/1.1 501 Method Unimplemented\r\nServer: bt3qzd\r\nConnection: Closed\r\n"
         return header.encode()
 
     # Mulitple Connect Queue
