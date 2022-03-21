@@ -155,6 +155,15 @@ class Jewel:
         self.sel = selectors.DefaultSelector()
         host = "0.0.0.0"  # Not completely sure what this is supposed to be?
 
+        import os
+        ON_HEROKU = os.environ.get('ON_HEROKU')
+        if ON_HEROKU:
+            # get the heroku port
+            # as per OP comments default is 17995
+            port = int(os.environ.get("PORT", 17995))
+        else:
+            port = port
+
         lsock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         lsock.bind((host, port))
         lsock.listen()
