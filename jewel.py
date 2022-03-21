@@ -155,7 +155,6 @@ class Jewel:
         self.sel = selectors.DefaultSelector()
         host = "0.0.0.0"  # Not completely sure what this is supposed to be?
 
-        import os
         ON_HEROKU = os.environ.get('ON_HEROKU')
         if ON_HEROKU:
             # get the heroku port
