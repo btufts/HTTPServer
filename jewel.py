@@ -156,7 +156,7 @@ class Jewel:
         host = "0.0.0.0"  # Not completely sure what this is supposed to be?
 
         lsock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        lsock.bind((host, os.environ.get('PORT', 80)))
+        lsock.bind((host, int(os.environ.get('PORT', 80))))
         lsock.listen()
         print(f"Listening on {(host, port)}")
         lsock.setblocking(False)
