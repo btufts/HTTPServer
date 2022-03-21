@@ -1,1 +1,1 @@
-web:python ./jewel.py 80 ./content
+web:./jewel.py 80 ./content
